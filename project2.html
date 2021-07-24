@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+    </head>
+    <body style="text-align: center; background-color: darkgreen; color: deepskyblue;">
+        <h1>My Family Book</h1>
+        <br>
+        <img src="" style="width: 30%" id="family_member_image">
+        <br>
+        <h3 id="family_member_name"></h3>
+        <button onclick="update();">Next</button>
+        <br>
+        <br>
+        <p>Me: Jhonny, do you like the app i made? <br> Jhonny: *On his phone and not paying atention in class* <br> Me: JHONNY!!! not again... i need a break... <br> Jhonny: Uh... yes.. i am here...</p>
+    </body>
+    <script>
+        var images =
+        ["https://i.postimg.cc/MKdhy06Z/family.jpg","https://i.postimg.cc/wjMnFtMX/father.jpg","https://i.postimg.cc/5ymDKL83/bro.jpg","https://i.postimg.cc/bw5W5zSK/mother.jpg","https://i.postimg.cc/JnL6wtrd/sister.jpg","https://i.postimg.cc/L6HcYQM0/grand-father.jpg"];
+
+        var names = ["Family Book","Amitab Dev","Aarya Dev","Hita Dev","Aabha Datt","Atul Dev"]
+
+        var i = 0;
+        function update()
+        {
+            i++;
+            var fam_members_in_array = 6
+            if(i > fam_members_in_array )
+        {
+            i = 0;
+        }
+        var updatedImage = images[i];
+        var updatedName = names[i];
+        document.getElementById("family_member_image").src = updatedImage;
+        document.getElementById("family_member_name").innerHTML= updatedName;
+    }
+    </script>
+</html>
